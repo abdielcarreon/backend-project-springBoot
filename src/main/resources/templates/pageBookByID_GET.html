@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>WEB Content Springboot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <div th:if="${bookmodel == null}">
+    <div th:text=" 'Book ID '+${id}+' not found in BD' "> </div>
+  </div>
+  <div th:unless="${bookmodel == null}">
+    Book found with the following information:
+    <div th:text=" 'ID: ' + ${bookmodel.id}"> </div>
+    <div th:text=" 'Nombre: ' + ${bookmodel.name}"> </div>
+    <div th:text=" 'Author: ' + ${bookmodel.author}"> </div>
+ </div>
+
+</body>
+</html>
